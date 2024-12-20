@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/one"
+        android:icon="@drawable/tabmenu"
+        android:orderInCategory="0"
+        android:title="@string/sy" />
+    <item
+        android:id="@+id/two"
+        android:orderInCategory="1"
+        android:title="@string/se"
+        android:icon="@drawable/tabexplore" />
+    <item
+        android:id="@+id/three"
+        android:orderInCategory="1"
+        android:title="@string/th"
+        android:icon="@drawable/tabmine" />
+
+</menu>

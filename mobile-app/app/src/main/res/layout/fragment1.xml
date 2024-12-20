@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.fragment1.Fragment1"
+    android:layout_marginBottom="80dp">
+
+
+    <ImageView
+        android:id="@+id/imagedialog"
+        android:layout_width="527dp"
+        android:layout_height="303dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/dialog" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#ff0000ff"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="Search Engine"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+
+    <TextView
+        android:id="@+id/start_search"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="316dp"
+        android:background="@drawable/frame"
+        android:gravity="center"
+        android:lines="2"
+        android:text="点击搜索"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagedialog"
+        app:layout_constraintStart_toStartOf="@+id/search_edit"
+        app:layout_constraintTop_toTopOf="@+id/imagedialog"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/addgallery"
+        android:layout_width="37dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@mipmap/add24"
+        android:background="@color/transparent"
+        android:onClick="gallery"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="jump"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45">
+
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24℃"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/place_weth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="London Cloudy"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_temperature"
+            app:layout_constraintTop_toTopOf="@+id/tv_temperature" />
+
+        <TextView
+            android:id="@+id/air_qut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="95 humid"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/place_weth"
+            app:layout_constraintTop_toBottomOf="@+id/place_weth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fr1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagedialog"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="309dp"
+        android:layout_height="75dp"
+        android:background="@color/transparent"
+        android:ems="10"
+        android:gravity="center_vertical|left"
+        android:hint="搜索或输入网址"
+        android:imeOptions="actionSearch"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColorHint="#95A1AA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagedialog"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热点栏空空如也"
+        android:visibility="invisible"
+        android:textColor="#85C1FA"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

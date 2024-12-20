@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mine"
+    tools:context=".fragments.fragment3.Fragment3">
+
+    <TextView
+        android:id="@+id/text_fr3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录以浏览更多"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/change_icon"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/fr3_toolframe"
+        android:gravity="left|center"
+        android:textSize="30sp"
+        android:text="更换头像"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_layout" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/fr3_toolframe"
+        android:gravity="left|center"
+        android:text="退出登录"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_icon" />
+
+    <ImageView
+        android:id="@+id/logout_icon"
+        android:layout_width="41dp"
+        android:layout_height="55dp"
+        android:scaleX="-1"
+        android:src="@mipmap/back"
+        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="@+id/logout"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/logout"
+        app:layout_constraintTop_toTopOf="@+id/logout"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/change_icon_icon"
+        android:layout_width="41dp"
+        android:layout_height="55dp"
+        android:src="@mipmap/back"
+        app:layout_constraintBottom_toBottomOf="@+id/change_icon"
+        android:scaleX="-1"
+        app:layout_constraintEnd_toEndOf="@+id/change_icon"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/change_icon"
+        app:layout_constraintTop_toTopOf="@+id/change_icon"
+        app:layout_constraintVertical_bias="0.5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.015">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circlebackground"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="280dp"
+            android:maxLines="1"
+            android:text="用户"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/user_description"
+            app:layout_constraintEnd_toEndOf="@+id/user_description"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/user_description" />
+
+        <TextView
+            android:id="@+id/user_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="124dp"
+            android:ellipsize="end"
+            android:maxWidth="280dp"
+            android:maxLines="3"
+            android:text="登录账户以享受更多内容"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
